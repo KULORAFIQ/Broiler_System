@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulasi</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    * {
+      font-family: 'Montserrat', sans-serif !important;
+    }
+
+    /* Animasi Kipas Berputar Cepat */
+    @keyframes putarKipas {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .kipas-aktif {
+      animation: putarKipas 0.5s linear infinite !important;
+      display: inline-block !important;
+    }
+
+    /* Animasi Butiran Jagung Berjatuhan */
+    @keyframes jagungJatuh {
+      0% { transform: translateY(-10px); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(20px); opacity: 0; }
+    }
+    
+    .pakan-container {
+      position: relative;
+      display: inline-block;
+      font-size: 3rem;
+    }
+    
+    .pakan-container.aktif::before,
+    .pakan-container.aktif::after {
+      content: "🌽"; 
+      position: absolute;
+      font-size: 0.7rem;
+      animation: jagungJatuh 0.6s linear infinite;
+    }
+    .pakan-container.aktif::before { left: -15px; animation-delay: 0s; }
+    .pakan-container.aktif::after { right: -15px; animation-delay: 0.3s; }
+
+    /* Pengunci Ukuran Tombol agar Sejajar Sempurna */
+    .control-card button {
+      min-width: 120px !important;
+      font-weight: 600 !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo-box">
+
+      <img src="../bahan/LOGO AYAM.jpeg" alt="Logo Broiler" class="logo-img">
+
+      <div class="logo-text">
+        Broiler System
+      </div>
+
+    </div>
+
+    <!-- MENU TOGGLE -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+     <!-- NAVIGATION TOGGLE -->
+<button class="desktop-menu-btn" onclick="toggleDesktopMenu()">
+  ☰ Menu
+</button>
+
+<div class="nav-links" id="navLinks">
+  <a href="home.html" class="active">Home</a>
+  <a href="tips.html">Tips</a>
+  <a href="penyakit.html">Penyakit</a>
+  <a href="referensi.html">Referensi</a>
+  <a href="simulasi.html">Simulasi</a>
+  <a href="tentang.html">Tentang</a>
+</div>
+
+    <!-- PROFILE -->
+    <div class="profile-menu">
+
+      <button class="profile-btn" onclick="toggleProfile()">
+        <img src="../bahan/profile.jpg" alt="Profile">
+      </button>
+
+      <div class="profile-dropdown" id="profileDropdown">
+
+        <h3>Broiler System</h3>
+
+        <div class="profile-user">
+
+          <img src="../bahan/profile.jpg" alt="Profile">
+
+          <div>
+            <h4>Admin Broiler</h4>
+            <p>Administrator</p>
+            <span>admin@broiler.local</span>
+          </div>
+
+        </div>
+
+        <div class="profile-info">
+
+          <div class="profile-icon">
+            🐔
+          </div>
+
+          <div>
+            <h4>Sistem</h4>
+            <p>Simulasi Ayam Broiler</p>
+          </div>
+
+        </div>
+
+        <button class="logout-btn" onclick="logoutUser()">
+          Log Out
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</nav>
+
+<section class="simulation-page" style="max-width: 95% !important; width: 95% !important; margin: 0 auto !important;">
+
+  <h1 class="page-title">Simulasi Kandang Broiler</h1>
+
+  <div class="simulation-box" style="background: none !important; border: none !important; box-shadow: none !important; padding: 0 !important; display: flex !important; flex-direction: row !important; gap: 40px !important; align-items: stretch !important; width: 100% !important; max-width: 100% !important; justify-content: space-between !important; flex-wrap: wrap !important; box-sizing: border-box !important;">
+
+    <div style="flex: 1 1 0px !important; width: 50% !important; min-width: 340px !important; background: rgba(255, 255, 255, 0.95) !important; padding: 30px !important; border-radius: 12px !important; box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important; box-sizing: border-box !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important;">
+
+      <div>
+        <h2 style="margin-top: 0; margin-bottom: 25px; border-bottom: 2px solid #333; padding-bottom: 10px; text-align: center;">Input Data Kandang</h2>
+
+        <div class="form-group">
+          <label>Nama Kandang</label>
+          <input type="text" id="nama" placeholder="Contoh: Kandang A">
+        </div>
+
+        <div class="form-group">
+          <label>Umur Ayam</label>
+          <input type="number" id="umurAyam" placeholder="Contoh: 7">
+        </div>
+
+        <div class="form-group">
+          <label>Jumlah Ayam</label>
+          <input type="number" id="jumlah" placeholder="Contoh: 500">
+        </div>
+
+        <div class="form-group">
+          <label>Suhu</label>
+          <input type="number" id="suhu" placeholder="Contoh: 32">
+        </div>
+
+        <div class="form-group">
+          <label>Kelembaban</label>
+          <input type="number" id="kelembaban" placeholder="Contoh: 70">
+        </div>
+
+        <div class="form-group">
+          <label>Pakan</label>
+          <select id="pakan">
+            <option>Starter</option>
+            <option>Grower</option>
+            <option>Finisher</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button class="cek-btn" onclick="cekSimulasi()" style="width: 100% !important; margin-top: 15px !important;">Cek Rekomendasi</button>
+
+        <div class="result-box" id="hasilRekomendasi" style="margin-top: 15px !important;">
+          Masukkan data kandang terlebih dahulu.
+        </div>
+      </div>
+
+    </div>
+
+    <div style="flex: 1 1 0px !important; width: 50% !important; min-width: 340px !important; background: rgba(255, 255, 255, 0.95) !important; padding: 30px !important; border-radius: 12px !important; box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important; box-sizing: border-box !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important;">
+
+      <h2 style="margin-top: 0; margin-bottom: 25px; border-bottom: 2px solid #333; padding-bottom: 10px; text-align: center;">Kontrol Perangkat</h2>
+
+      <div class="control-grid" style="display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 20px !important; width: 100% !important; flex-grow: 1 !important; align-items: stretch !important;">
+
+        <div class="control-card" style="grid-column: span 2 !important; border-bottom: 2px solid #eaeaea !important; box-sizing: border-box !important; padding: 15px 15px 25px 15px !important; margin: 0 !important; display: flex !important; flex-direction: column !important; justify-content: center !important;">
+          <center>
+            <h2 style="margin-top: 0; font-size: 1.3rem;">Lampu Kandang</h2>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 25px; margin: 15px 0;">
+              <div class="lamp" id="lamp" style="margin: 0 !important;"></div>
+              <div class="button-group" style="margin: 0 !important;">
+                <button onclick="lampuOff()">OFF</button>
+                <button onclick="lampuOn()">ON</button>
+              </div>
+            </div>
+            <p id="statusLampu" style="margin: 0 !important;"></p>
+          </center>
+        </div>
+
+        <div class="control-card" style="box-sizing: border-box !important; padding: 20px 20px 20px 0 !important; margin: 0 !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; height: 100% !important;">
+          <center style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%;">
+            <h2 style="margin-top: 0; font-size: 1.2rem; min-height: 40px;">Blower / Kipas</h2>
+            <div class="fan" style="margin: 15px 0 !important; display: flex; align-items: center; justify-content: center; flex-grow: 1;"><h1 id="iconKipas" style="margin:0;">🌀</h1></div>
+            <div>
+              <div class="button-group" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 15px !important;">
+                <button onclick="kipasOff()">OFF</button>
+                <button onclick="kipasOn()">ON</button>
+              </div>
+              <p id="statusKipas" style="margin: 0 !important; min-height: 40px; display: flex; align-items: center; justify-content: center;"></p>
+            </div>
+          </center>
+        </div>
+
+        <div class="control-card" style="box-sizing: border-box !important; padding: 20px 0 20px 20px !important; margin: 0 !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; height: 100% !important; border-left: 2px solid #eaeaea !important; border-radius: 0 !important;">
+          <center style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%;">
+            <h2 style="margin-top: 0; font-size: 1.2rem; min-height: 40px;">Pakan Otomatis</h2>
+            <div style="margin: 15px 0 !important; display: flex; align-items: center; justify-content: center; flex-grow: 1;">
+              <div id="containerPakan" class="pakan-container"><span id="iconPakan">🌽</span></div>
+            </div>
+            <div>
+              <div class="button-group" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 15px !important;">
+                <button onclick="pakanOff()">NONAKTIF</button>
+                <button onclick="pakanOn()">AKTIF</button>
+              </div>
+              <p id="statusPakan" style="margin: 0 !important; min-height: 40px; display: flex; align-items: center; justify-content: center;"></p>
+            </div>
+          </center>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script src="../script.js"></script>
+<script src="../auth.js"></script>
+
+<script>
+cekLogin();
+</script>
+<div class="page-transition"></div>
+
+</body>
+</html>

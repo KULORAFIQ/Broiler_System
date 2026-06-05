@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penyakit</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo-box">
+
+      <img src="../bahan/LOGO AYAM.jpeg" alt="Logo Broiler" class="logo-img">
+
+      <div class="logo-text">
+        Broiler System
+      </div>
+
+    </div>
+
+    <!-- MENU TOGGLE -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+       <!-- NAVIGATION TOGGLE -->
+<button class="desktop-menu-btn" onclick="toggleDesktopMenu()">
+  ☰ Menu
+</button>
+
+<div class="nav-links" id="navLinks">
+  <a href="home.html" class="active">Home</a>
+  <a href="tips.html">Tips</a>
+  <a href="penyakit.html">Penyakit</a>
+  <a href="referensi.html">Referensi</a>
+  <a href="simulasi.html">Simulasi</a>
+  <a href="tentang.html">Tentang</a>
+</div>
+
+    <!-- PROFILE -->
+    <div class="profile-menu">
+
+      <button class="profile-btn" onclick="toggleProfile()">
+        <img src="../bahan/profile.jpg" alt="Profile">
+      </button>
+
+      <div class="profile-dropdown" id="profileDropdown">
+
+        <h3>Broiler System</h3>
+
+        <div class="profile-user">
+
+          <img src="../bahan/profile.jpg" alt="Profile">
+
+          <div>
+            <h4>Admin Broiler</h4>
+            <p>Administrator</p>
+            <span>admin@broiler.local</span>
+          </div>
+
+        </div>
+
+        <div class="profile-info">
+
+          <div class="profile-icon">
+            🐔
+          </div>
+
+          <div>
+            <h4>Sistem</h4>
+            <p>Simulasi Ayam Broiler</p>
+          </div>
+
+        </div>
+
+        <button class="logout-btn" onclick="logoutUser()">
+          Log Out
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</nav>
+
+  <section class="penyakit-section">
+
+    <h1 class="page-title">Info Penyakit Ayam Broiler</h1>
+
+    <div class="penyakit-container">
+
+      <div class="accordion-card">
+        <button class="accordion-btn">
+          1. Tetelo (Newcastle Disease)
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Tetelo atau Newcastle Disease disebabkan oleh virus Paramyxo yang menyerang
+            sistem pernapasan dan saraf ayam. Penyakit ini termasuk berbahaya karena
+            dapat menyebar dengan cepat di dalam kandang.
+          </p>
+          <p>
+            Gejalanya antara lain sesak napas, batuk, ayam terlihat lesu, diare,
+            serta pembengkakan pada area mata atau leher. Belum ada obat khusus untuk
+            penyakit ini, sehingga pencegahan menjadi langkah paling penting.
+          </p>
+          <p>
+            Pencegahan dapat dilakukan dengan vaksinasi, menjaga sanitasi kandang,
+            serta memberikan pakan yang bergizi agar daya tahan tubuh ayam tetap baik.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-card">
+        <button class="accordion-btn">
+          2. Feses Kapur (Pullorum)
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Feses kapur atau Pullorum disebabkan oleh bakteri Salmonella Pullorum.
+            Penyakit ini biasanya menyerang ayam muda dan dapat menyebabkan gangguan
+            pencernaan yang cukup serius.
+          </p>
+          <p>
+            Ciri utamanya adalah diare berwarna putih seperti kapur, nafsu makan
+            menurun, tubuh ayam tampak lemah, dan dalam beberapa kasus ayam dapat
+            mengalami sesak napas.
+          </p>
+          <p>
+            Penanganannya dapat dilakukan dengan memisahkan ayam yang sakit dari ayam
+            sehat, menjaga kebersihan kandang, serta melakukan pengawasan rutin agar
+            penyakit tidak menyebar.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-card">
+        <button class="accordion-btn">
+          3. Gumboro (Infectious Bursal Disease)
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Gumboro disebabkan oleh virus Avibirnavirus yang menyerang sistem kekebalan
+            tubuh ayam. Penyakit ini membuat daya tahan tubuh ayam menjadi lemah sehingga
+            ayam lebih mudah terkena penyakit lain.
+          </p>
+          <p>
+            Ayam yang terkena Gumboro biasanya terlihat lesu, nafsu makan menurun,
+            bulu kusam, dan dapat mengalami diare. Penyakit ini perlu diwaspadai karena
+            dapat mempengaruhi pertumbuhan ayam broiler.
+          </p>
+          <p>
+            Belum ada obat khusus untuk Gumboro. Pencegahan dilakukan dengan vaksinasi,
+            sanitasi kandang secara rutin, pemberian vitamin, dan menjaga kualitas nutrisi.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-card">
+        <button class="accordion-btn">
+          4. Ngorok (CRD)
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            CRD atau Chronic Respiratory Disease adalah penyakit pernapasan yang
+            disebabkan oleh bakteri Mycoplasma gallisepticum. Penyakit ini sering
+            muncul ketika kondisi kandang lembap, kotor, atau sirkulasi udara kurang baik.
+          </p>
+          <p>
+            Gejalanya meliputi suara ngorok, bersin, batuk, keluar cairan dari hidung,
+            dan ayam tampak sulit bernapas. Jika tidak ditangani, kondisi ayam bisa
+            semakin lemah dan pertumbuhannya terganggu.
+          </p>
+          <p>
+            Penyakit ini dapat dikontrol dengan antibiotik sesuai anjuran, menjaga suhu
+            kandang tetap stabil, memperbaiki ventilasi, dan membersihkan kandang secara rutin.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-card">
+        <button class="accordion-btn">
+          5. Flu Burung (Avian Influenza)
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Flu burung atau Avian Influenza disebabkan oleh virus influenza tipe A.
+            Penyakit ini sangat berbahaya karena dapat menyebabkan kematian massal pada
+            ayam dalam waktu cepat.
+          </p>
+          <p>
+            Gejalanya antara lain ayam ngorok, diare, keluar cairan dari mata atau hidung,
+            lemas, nafsu makan menurun, hingga kematian mendadak dalam jumlah banyak.
+          </p>
+          <p>
+            Pencegahannya dilakukan dengan vaksinasi, penerapan biosekuriti yang ketat,
+            membatasi akses orang luar ke kandang, serta isolasi atau pemusnahan ayam
+            yang sudah terinfeksi.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-card">
+        <button class="accordion-btn">
+          6. Kolibasilosis
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Kolibasilosis disebabkan oleh bakteri Escherichia coli. Penyakit ini dapat
+            menyerang ayam broiler ketika kondisi kandang kurang bersih atau daya tahan
+            tubuh ayam sedang menurun.
+          </p>
+          <p>
+            Gejala yang sering terlihat adalah ayam lesu, diare, bulu di sekitar anus
+            tampak lengket, nafsu makan turun, dan ayam mengalami gangguan pernapasan.
+          </p>
+          <p>
+            Penanganan dapat dilakukan dengan menjaga kebersihan kandang, memperbaiki
+            kualitas air minum, serta menggunakan antibiotik tertentu sesuai kebutuhan.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-card">
+        <button class="accordion-btn">
+          7. Snot (Infectious Coryza)
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Snot atau Infectious Coryza disebabkan oleh bakteri Haemophilus paragallinarum.
+            Penyakit ini menyerang saluran pernapasan ayam dan dapat menyebar melalui
+            kontak langsung maupun lingkungan kandang yang kotor.
+          </p>
+          <p>
+            Gejalanya berupa wajah bengkak, mata berair, bersin, keluar lendir dari hidung,
+            dan ayam terlihat sulit bernapas. Penyakit ini dapat membuat ayam tidak nyaman
+            sehingga nafsu makan menurun.
+          </p>
+          <p>
+            Penanganannya dapat dilakukan dengan pemberian antibiotik, isolasi ayam sakit,
+            dan desinfeksi kandang secara rutin agar penyebaran penyakit bisa dikurangi.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-card">
+        <button class="accordion-btn">
+          Kesimpulan Pencegahan
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Pencegahan penyakit ayam broiler dapat dilakukan dengan menjaga kebersihan
+            kandang, memberikan pakan bernutrisi, menjaga suhu kandang tetap stabil,
+            serta melakukan vaksinasi dan sanitasi secara rutin.
+          </p>
+          <p>
+            Selain itu, ayam yang terlihat sakit sebaiknya segera dipisahkan agar tidak
+            menular ke ayam lain. Pemeriksaan kandang secara berkala juga penting untuk
+            menjaga ayam tetap sehat dan pertumbuhannya optimal.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="../script.js"></script>
+  <script src="../auth.js"></script>
+
+<script>
+cekLogin();
+</script>
+
+  <div class="page-transition"></div>
+</body>
+</html>

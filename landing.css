@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+.landing-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+   background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url('bahan/ayam1.jpg');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.landing-content{
+    max-width:900px;
+    padding:40px;
+    color:white;
+}
+
+.landing-logo{
+    width:150px;
+    height:150px;
+    object-fit:contain;
+    background:white;
+    border-radius:50%;
+    padding:10px;
+    margin-bottom:25px;
+}
+
+.landing-title{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.landing-subtitle{
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.landing-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ffd54f;
+    color:#071b33;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.landing-btn:hover{
+    transform:translateY(-5px);
+}
+
+.feature-mini{
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.feature-mini div{
+    background:rgba(255,255,255,.15);
+    padding:15px 25px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo-box">
+
+      <img src="../bahan/LOGO AYAM.jpeg" alt="Logo Broiler" class="logo-img">
+
+      <div class="logo-text">
+        Broiler System
+      </div>
+
+    </div>
+
+    <!-- MENU TOGGLE -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+       <!-- NAVIGATION TOGGLE -->
+<button class="desktop-menu-btn" onclick="toggleDesktopMenu()">
+  ☰ Menu
+</button>
+
+<div class="nav-links" id="navLinks">
+  <a href="home.html" class="active">Home</a>
+  <a href="tips.html">Tips</a>
+  <a href="penyakit.html">Penyakit</a>
+  <a href="referensi.html">Referensi</a>
+  <a href="simulasi.html">Simulasi</a>
+  <a href="tentang.html">Tentang</a>
+</div>
+
+    <!-- PROFILE -->
+    <div class="profile-menu">
+
+      <button class="profile-btn" onclick="toggleProfile()">
+        <img src="../bahan/profile.jpg" alt="Profile">
+      </button>
+
+      <div class="profile-dropdown" id="profileDropdown">
+
+        <h3>Broiler System</h3>
+
+        <div class="profile-user">
+
+          <img src="../bahan/profile.jpg" alt="Profile">
+
+          <div>
+            <h4>Admin Broiler</h4>
+            <p>Administrator</p>
+            <span>admin@broiler.local</span>
+          </div>
+
+        </div>
+
+        <div class="profile-info">
+
+          <div class="profile-icon">
+            🐔
+          </div>
+
+          <div>
+            <h4>Sistem</h4>
+            <p>Simulasi Ayam Broiler</p>
+          </div>
+
+        </div>
+
+        <button class="logout-btn" onclick="logoutUser()">
+          Log Out
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</nav>
+
+<section class="tentang-section">
+
+  <h1 class="page-title">Tentang Broiler System</h1>
+
+  <div class="about-hero-card">
+
+    <div class="about-text">
+      <span class="about-badge">🐔 Smart Broiler Simulation</span>
+
+      <h2>Sistem Simulasi Lampu Kandang Ayam Broiler</h2>
+
+      <p>
+        Broiler System adalah website simulasi sederhana yang membantu memahami
+        pengaturan lampu, suhu, kelembaban, dan kondisi kandang ayam broiler
+        secara lebih mudah dan interaktif.
+      </p>
+
+      <p>
+        Website ini dibuat sebagai media pembelajaran berbasis web agar pengguna
+        dapat melihat rekomendasi pencahayaan dan kontrol perangkat kandang secara praktis.
+      </p>
+
+      <a href="simulasi.html" class="about-btn">Coba Simulasi</a>
+    </div>
+
+    <div class="about-image-box">
+      <div class="about-circle">💡</div>
+      <h3>Kontrol Lampu Otomatis</h3>
+      <p>Membantu menentukan pencahayaan berdasarkan umur ayam dan kondisi kandang.</p>
+    </div>
+
+  </div>
+
+  <div class="about-feature-grid">
+
+    <div class="about-feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Tujuan Sistem</h3>
+      <p>
+        Memberikan gambaran simulasi pengelolaan kandang ayam broiler secara digital.
+      </p>
+    </div>
+
+    <div class="about-feature-card">
+      <div class="feature-icon">🌡️</div>
+      <h3>Monitoring Kandang</h3>
+      <p>
+        Menampilkan simulasi suhu, kelembaban, lampu, kipas, dan pakan otomatis.
+      </p>
+    </div>
+
+    <div class="about-feature-card">
+      <div class="feature-icon">⚙️</div>
+      <h3>Teknologi</h3>
+      <p>
+        Dibuat menggunakan HTML, CSS, dan JavaScript tanpa framework tambahan.
+      </p>
+    </div>
+
+  </div>
+  <!-- TENTANG AYAM BROILER -->
+<div class="about-chicken-box">
+
+  <h2>🐔 Mengenal Ayam Broiler</h2>
+
+  <p>
+    Ayam broiler merupakan jenis ayam ras pedaging yang dibudidayakan
+    untuk menghasilkan daging dalam waktu yang relatif singkat.
+    Ayam broiler memiliki pertumbuhan yang cepat sehingga menjadi
+    salah satu komoditas peternakan yang banyak dikembangkan.
+  </p>
+
+  <p>
+    Dengan manajemen kandang yang baik, pemberian pakan yang tepat,
+    serta pengaturan suhu dan pencahayaan yang optimal,
+    ayam broiler dapat mencapai bobot panen ideal hanya dalam waktu
+    sekitar 35 hingga 45 hari.
+  </p>
+
+  <div class="broiler-stat-grid">
+
+    <div class="broiler-stat-card">
+      <div class="stat-icon">⏳</div>
+      <h3>Umur Panen</h3>
+      <span>35 - 45 Hari</span>
+    </div>
+
+    <div class="broiler-stat-card">
+      <div class="stat-icon">⚖️</div>
+      <h3>Berat Panen</h3>
+      <span>1.5 - 2.5 Kg</span>
+    </div>
+
+    <div class="broiler-stat-card">
+      <div class="stat-icon">🌾</div>
+      <h3>Efisiensi Pakan</h3>
+      <span>Sangat Baik</span>
+    </div>
+
+    <div class="broiler-stat-card">
+      <div class="stat-icon">📈</div>
+      <h3>Pertumbuhan</h3>
+      <span>Cepat</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- MANFAAT PENCAHAYAAN -->
+<div class="about-lamp-box">
+
+  <h2>💡 Pentingnya Pencahayaan pada Ayam Broiler</h2>
+
+  <div class="lamp-grid">
+
+    <div class="lamp-card">
+      <div class="lamp-icon">🌙</div>
+      <h3>Menjaga Aktivitas Ayam</h3>
+      <p>
+        Lampu membantu ayam tetap aktif untuk makan dan minum
+        terutama pada masa awal pertumbuhan.
+      </p>
+    </div>
+
+    <div class="lamp-card">
+      <div class="lamp-icon">🔥</div>
+      <h3>Menjaga Suhu</h3>
+      <p>
+        Lampu dapat membantu menjaga suhu kandang agar tetap hangat
+        dan nyaman bagi ayam.
+      </p>
+    </div>
+
+    <div class="lamp-card">
+      <div class="lamp-icon">📊</div>
+      <h3>Meningkatkan Pertumbuhan</h3>
+      <p>
+        Pengaturan pencahayaan yang baik dapat membantu meningkatkan
+        konsumsi pakan dan pertumbuhan ayam broiler.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+  <div class="about-flow-box">
+    <h2>Cara Kerja Sistem</h2>
+
+    <div class="flow-list">
+      <div class="flow-item">
+        <span>1</span>
+        <p>Pengguna memasukkan data kandang seperti umur ayam, suhu, dan kelembaban.</p>
+      </div>
+
+      <div class="flow-item">
+        <span>2</span>
+        <p>Sistem membaca data dan memberikan rekomendasi kondisi kandang.</p>
+      </div>
+
+      <div class="flow-item">
+        <span>3</span>
+        <p>Pengguna dapat menyalakan lampu, kipas, dan pakan otomatis secara simulasi.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script src="../script.js"></script>
+<script src="../auth.js"></script>
+
+<script>
+cekLogin();
+</script>
+<div class="page-transition"></div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referensi</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo-box">
+
+      <img src="../bahan/LOGO AYAM.jpeg" alt="Logo Broiler" class="logo-img">
+
+      <div class="logo-text">
+        Broiler System
+      </div>
+
+    </div>
+
+    <!-- MENU TOGGLE -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+       <!-- NAVIGATION TOGGLE -->
+<button class="desktop-menu-btn" onclick="toggleDesktopMenu()">
+  ☰ Menu
+</button>
+
+<div class="nav-links" id="navLinks">
+  <a href="home.html" class="active">Home</a>
+  <a href="tips.html">Tips</a>
+  <a href="penyakit.html">Penyakit</a>
+  <a href="referensi.html">Referensi</a>
+  <a href="simulasi.html">Simulasi</a>
+  <a href="tentang.html">Tentang</a>
+</div>
+
+    <!-- PROFILE -->
+    <div class="profile-menu">
+
+      <button class="profile-btn" onclick="toggleProfile()">
+        <img src="../bahan/profile.jpg" alt="Profile">
+      </button>
+
+      <div class="profile-dropdown" id="profileDropdown">
+
+        <h3>Broiler System</h3>
+
+        <div class="profile-user">
+
+          <img src="../bahan/profile.jpg" alt="Profile">
+
+          <div>
+            <h4>Admin Broiler</h4>
+            <p>Administrator</p>
+            <span>admin@broiler.local</span>
+          </div>
+
+        </div>
+
+        <div class="profile-info">
+
+          <div class="profile-icon">
+            🐔
+          </div>
+
+          <div>
+            <h4>Sistem</h4>
+            <p>Simulasi Ayam Broiler</p>
+          </div>
+
+        </div>
+
+        <button class="logout-btn" onclick="logoutUser()">
+          Log Out
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</nav>
+
+<section class="referensi-section">
+  <h1 class="page-title">Referensi</h1>
+
+  <div class="referensi-grid">
+
+    <div class="ref-card">
+      <div class="ref-icon">📘</div>
+      <div class="ref-info">
+        <h3>Sistem Otomatisasi Kandang Ayam Berbasis IoT</h3>
+        <p>journal.irpi.or.id</p>
+        <button onclick="openPopup('https://journal.irpi.or.id/index.php/malcom/article/view/1686')">
+          Buka Referensi
+        </button>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-icon">💡</div>
+      <div class="ref-info">
+        <h3>Pengaruh Pencahayaan terhadap Pertumbuhan Ayam Broiler</h3>
+        <p>jipho.uho.ac.id</p>
+        <button onclick="openPopup('https://jipho.uho.ac.id/index.php/journal/article/view/691')">
+          Buka Referensi
+        </button>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-icon">🌱</div>
+      <div class="ref-info">
+        <h3>Smart Farming pada Peternakan Modern</h3>
+        <p>jurnal.politap.ac.id</p>
+        <button onclick="openPopup('https://jurnal.politap.ac.id/index.php/entries/article/view/1632')">
+          Buka Referensi
+        </button>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-icon">🌡️</div>
+      <div class="ref-info">
+        <h3>Teknologi Monitoring Suhu dan Kelembaban Kandang</h3>
+        <p>jurnalunla.web.id</p>
+        <button onclick="openPopup('https://jurnalunla.web.id/tiarsie/index.php/tiarsie/article/view/67')">
+          Buka Referensi
+        </button>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-icon">⚡</div>
+      <div class="ref-info">
+        <h3>Sistem Lampu Otomatis untuk Efisiensi Energi</h3>
+        <p>ojs.trigunadharma.ac.id</p>
+        <button onclick="openPopup('https://ojs.trigunadharma.ac.id/index.php/jis/article/view/9961')">
+          Buka Referensi
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="popup-link" id="popupLink">
+  <div class="popup-box">
+    <button class="close-popup" onclick="closePopup()">×</button>
+    <iframe id="popupFrame" src=""></iframe>
+  </div>
+</div>
+
+<script>
+  function openPopup(url){
+    document.getElementById("popupLink").classList.add("active");
+    document.getElementById("popupFrame").src = url;
+  }
+
+  function closePopup(){
+    document.getElementById("popupLink").classList.remove("active");
+    document.getElementById("popupFrame").src = "";
+  }
+</script>
+
+<script src="../script.js"></script>
+<script src="../auth.js"></script>
+
+<script>
+cekLogin();
+</script>
+<div class="page-transition"></div>
+
+</body>
+</html>
